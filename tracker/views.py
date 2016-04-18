@@ -1,3 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
+def employee_list(request):
+    return render(request, 'tracker/employee_list.html', {})
