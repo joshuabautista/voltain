@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COMPANY TIME TRACKER</title>
+</head>
+<body>
+	<div>
+	    <h1 align="center"><a href="/">Volta In</a></h1>
+	</div>
+	
+		{% for c in company %}
+			<div align="center">
+				<h1>{{ c.company }}</h1>
+			</div>
+		{% endfor %}
+	
+		
+	<h2>List of Employees</h2>
+
+		{% for l in log %}
+		<div>
+		<p>Name : {{ l.employee }} Timed In : {{ l.time_in }}</p>
+		</div>
+		{% endfor %}
+
+</body>
+</html>

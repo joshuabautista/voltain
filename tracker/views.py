@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from django.utils import timezone
+from .models import Companie, Employee, Log
 
 def employee_list(request):
-    return render(request, 'tracker/employee_list.html', {})
+	company = Companie.objects.all()
+	employees = Employee.objects.all()
+	log = Log.objects.filter(employee = employees)
+	return render(request, 'tracker/employee_list.html', {'employees': employees, 'company' : company, 'log' : log})
