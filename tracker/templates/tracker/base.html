@@ -11,14 +11,15 @@
 <body>
     <div class="page-header">
         {% if user.is_authenticated %}
-        <a href="{% url 'employee_list' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
         {% else %}
         <a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-        <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
         {% endif %}
-        <h1><a href="{% url 'tracker.views.employee_list' %}">Volta In</a></h1>
+
+        <h1 align="center"><a href="{% url 'tracker.views.employee_list' %}">Volta In</a></h1>
     </div>
 {% block content %}
 {% endblock %}
+
 </body>
 </html>

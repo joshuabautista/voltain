@@ -1,10 +1,7 @@
 {% extends 'tracker/base.html' %}
 
 {% block content %}
-	<div class="page-header">
-	    <h1 align="center"><a href="{% url 'employee_list' %}">Volta In</a></h1>
-	</div>
-    <h1>Time In</h1>
+    <h1>Time in</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Time in</button>

@@ -16,7 +16,7 @@ class Employee(models.Model):
 
 class Log(models.Model):
 	employee = models.ForeignKey('Employee')
-	time_in = models.DateTimeField(auto_now_add=True)
+	time_in = models.DateTimeField(default=timezone.now)
 	time_out = models.DateTimeField(blank=True, null=True)
 
 	def isave(self):
