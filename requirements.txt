@@ -1,0 +1,62 @@
+
+Companies track their employee's hours using a lot of different methods. 
+You're tasked with creating a company time tracking web app. 
+Your app is required to support at least one company.
+Also, you're required to think of a name for the system. 
+
+Features Companies should be able to have multiple employees.
+
+*Employees
+Employees should be able to check-in. 
+Employees should be able to check-out. 
+Employees should be able to see the time left in their shift. 
+Employees should be able to see their own time reports. 
+Employees should be able to see a live list of people logging in and out.
+
+*Admins
+Admins should be able to see multiple Employees reports (collated results). 
+Admins should be able to configure the system through a UI.(e.g. Company name, shift length, etc.) 
+
+Technical Requirements 
+
+The app should be hosted on Heroku The app should use Django for its server-side code. 
+The app should use React for its front-end code (where appropriate). 
+The app should be styled using Sass. 
+The app should be usable on mobile phones, tablets, and desktop PCs. 
+You should use Git for version control. 
+
+Deadline You are given two weeks for this project, starting Monday April 11, 2016. 
+The presentation date is April 27, 2016. 
+
+Judging Criteria 
+You will be judged based on the following criteria: 
+
+20% Code Style. How clear and clean your code is written. 
+30% System Architecture. How well designed the system is. 
+30% Feature Implementation. How well each feature works. 
+20% Technical Requirement. How well you abided with the technical requirements.
+
+time_trackr = blog
+
+The last step here is to add our new model to our database. First we have to make Django know that we have some changes in our model (we have just created it!). Go to your console window and type {"python manage.py makemigrations blog"}
+
+
+Django prepared for us a migration file that we have to apply now to our database. Type {"python manage.py migrate blog"} and the output should be:
+
+REPOSITORY
+git init
+git config --global user.name ""
+git config --global user.email ""
+
+git status
+git add -A
+git commit -m "My Django Girls app, first commit"
+
+git remote add origin https://github.com/<your-github-username>/my-first-blog.git
+git push -u origin master
+
+git add -A
+git commit ""
+git push
+
+when you love someone you just, you…you don’t stop, ever. Even when people roll their eyes, and call you crazy. Even then. Especially then. You just– you don’t give up. Because if I could just give up…if I could just, you know, take the whole world’s advice and– and move on and find someone else, that wouldn’t be love. That would be… that would be some other disposable thing that is not worth fighting for. But I– that is not what this is."

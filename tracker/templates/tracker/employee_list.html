@@ -1,26 +1,38 @@
+{% extends 'tracker/base.html' %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+	<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 	<title>COMPANY TIME TRACKER</title>
 </head>
 <body>
-	<div>
-	    <h1 align="center"><a href="/">Volta In</a></h1>
-	</div>
+
+{% block content %}
 	
 		{% for c in company %}
-			<div align="center">
+			<div align="center" class="post">
 				<h1>{{ c.company }}</h1>
 			</div>
 		{% endfor %}
 	
 		
 	<h2>List of Employees</h2>
+	    <div class="row">
+	        <div class="col-md-8">
+			{% for l in log %}
+			<div class="post">
+			<p><a href = "{% url 'employee_detail' pk=l.pk %}">Name : {{ l.employee }} </a> Timed In : {{ l.time_in }} Timed Out {{ l.time_out }}</p>
+			</div>
+			{% endfor %}
 
-		{% for l in log %}
-		<div>
-		<p>Name : {{ l.employee }} Timed In : {{ l.time_in }}</p>
-		</div>
-		{% endfor %}
+	        </div>
+	    </div>
+	</div>
+{% endblock %}
+
 </body>
 </html>

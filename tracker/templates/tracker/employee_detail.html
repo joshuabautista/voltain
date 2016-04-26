@@ -1,0 +1,11 @@
+{% extends 'tracker/base.html' %}
+
+
+{% block content %}
+	<div class="page-header">
+	    <h1 align="center"><a href="{% url 'employee_list' %}">Volta In</a></h1>
+	</div>
+	<h1 align="center">EMPLOYEE DETAILS</h1>
+		<p align="center"> {{ l.employee }} {{ l.time_in }}</p>
+{%endblock%}
+

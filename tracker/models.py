@@ -8,7 +8,7 @@ class Companie(models.Model):
 		return self.company
 
 class Employee(models.Model):
-	company = models.ForeignKey('Companie')
+	user = models.ForeignKey('auth.User')
 	employee = models.CharField(max_length=50)
 
 	def __str__(self):
@@ -16,10 +16,8 @@ class Employee(models.Model):
 
 class Log(models.Model):
 	employee = models.ForeignKey('Employee')
-	time_in = models.DateTimeField(
-            default=timezone.now)
-	time_out = models.DateTimeField(
-		blank=True, null=True)
+	time_in = models.DateTimeField(auto_now_add=True)
+	time_out = models.DateTimeField(blank=True, null=True)
 
 	def isave(self):
 		self.time_out = timezone.now()
