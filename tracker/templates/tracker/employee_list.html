@@ -20,18 +20,23 @@
 		{% endfor %}
 	
 		
-	<h2>List of Employees</h2>
-	    <div class="row">
-	        <div class="col-md-8">
-			{% for l in log %}
-			<div class="post">
-			<p><a href = "{% url 'employee_detail' pk=l.pk %}">Name : {{ l.employee }} </a> Timed In : {{ l.time_in }} Timed Out {{ l.time_out }}</p>
-			</div>
-			{% endfor %}
+	<h3 align="center">List of Employees Timed in</h3>
 
-	        </div>
-	    </div>
-	</div>
+<table border="2" style="width:100%" align="center">
+  <tr align="center" bgcolor="#DAB1C0">
+    <td><a href="{% url 'tracker.views.employee_log' %}">Employee</a></td>
+    <td><p>Timed in at</p></td> 
+    <td><p>Timed out at<p></td>
+  </tr>
+  <tr>
+  {% for l in log %}
+    <td><a href = "{% url 'employee_detail' pk=l.pk %}"> {{ l.employee }} </a></td>
+    <td><p align="center">{{ l.time_in }}</p></td> 
+    <td><p align="center">{{ l.time_out }}</p></td>
+  </tr>
+  {% endfor %}
+</table>
+<br>
 	<a href="{% url 'time_in' %}" class="top-menu"><button type="submit" class="save btn btn-default">Time in</button></a>
 {% endblock %}
 </body>

@@ -3,10 +3,14 @@
 
 {% block content %}
 	<h1 align="center">EMPLOYEE DETAILS</h1>
-		<p align="center"> {{ l.employee }} {{ l.time_in }} </p>
+	<br>
+	<br>
+		<p align="center"> {{ l.employee }} Time in: {{ l.time_in }} 
+Time out:
 {% if l.time_out %}
     {{ l.time_out }}
 {% else %}
     <a class="btn btn-default" href="{% url 'tracker.views.post_publish' pk=l.pk %}">Time out</a>
-{% endif %}		
+{% endif %}	</p>
+
 {%endblock%}

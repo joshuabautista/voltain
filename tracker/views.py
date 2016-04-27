@@ -39,3 +39,7 @@ def post_publish(request, pk):
     post = get_object_or_404(Log, pk=pk)
     post.isave()
     return redirect('tracker.views.employee_detail', pk=pk)
+
+def employee_log(request):
+    emp = Employee.objects.all()
+    return render(request, 'tracker/employees.html', {'emp' : emp})    

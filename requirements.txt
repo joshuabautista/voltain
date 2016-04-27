@@ -36,27 +36,6 @@ You will be judged based on the following criteria:
 30% Feature Implementation. How well each feature works. 
 20% Technical Requirement. How well you abided with the technical requirements.
 
-time_trackr = blog
 
-The last step here is to add our new model to our database. First we have to make Django know that we have some changes in our model (we have just created it!). Go to your console window and type {"python manage.py makemigrations blog"}
-
-
-Django prepared for us a migration file that we have to apply now to our database. Type {"python manage.py migrate blog"} and the output should be:
-
-REPOSITORY
-git init
-git config --global user.name ""
-git config --global user.email ""
-
-git status
-git add -A
-git commit -m "My Django Girls app, first commit"
-
-git remote add origin https://github.com/<your-github-username>/my-first-blog.git
-git push -u origin master
-
-git add -A
-git commit ""
-git push
 
 when you love someone you just, you…you don’t stop, ever. Even when people roll their eyes, and call you crazy. Even then. Especially then. You just– you don’t give up. Because if I could just give up…if I could just, you know, take the whole world’s advice and– and move on and find someone else, that wouldn’t be love. That would be… that would be some other disposable thing that is not worth fighting for. But I– that is not what this is."

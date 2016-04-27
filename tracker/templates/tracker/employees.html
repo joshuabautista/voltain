@@ -1,0 +1,7 @@
+{% extends 'tracker/base.html' %}
+
+{% block content %}
+{% for employee in emp %}
+    <h2 align="center">{{employee.employee}}</h2>
+{% endfor %}
+{% endblock %}

@@ -10,16 +10,14 @@
 </head>
 <body>
     <div class="page-header">
-        {% if user.is_authenticated %}
-        <p class="top-menu">Hello {{ user.username }}<small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
-        {% else %}
-        <a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-        {% endif %}
-
-        <h1 align="center"><a href="{% url 'tracker.views.employee_list' %}">Volta In</a></h1>
+        <h1><a href="{% url 'tracker.views.employee_list' %}">Volta In</a></h1>
     </div>
 {% block content %}
 {% endblock %}
-
+        {% if user.is_authenticated %}
+        <p class="top-menu" align="right"><small>(<a href="{% url 'django.contrib.auth.views.logout' %}">Log out</a>)</small></p>
+        {% else %}
+        <a href="{% url 'django.contrib.auth.views.login' %}" class="top-menu"></a>
+        {% endif %}
 </body>
 </html>
